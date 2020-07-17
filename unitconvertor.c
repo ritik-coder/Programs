@@ -13,7 +13,7 @@ int main()
     while (1)
     {
         printf("Enter the iput character: q to quit\n 1. kms to meter\n 2. km to miles\n 3. m to cm\n 4. inches to foot\n 5. cm to inches\n 6. pound to kgs\n 7. inches to metres\n");
-        scanf("%c", &input);
+        scanf(" %c", &input);
 
         switch (input)
         {
@@ -26,49 +26,49 @@ int main()
             printf("Enter quantity in terms of first unit\n");
             scanf("%f", &first);
             second = first * kmtometer;
-            printf("%f Kilometer is equal to %f Meter\n", first, second);
+            printf("%f Kilometer is equal to %f Meter\n\n\n", first, second);
             break;
 
         case '2':
             printf("Enter quantity in terms of first unit\n");
             scanf("%f", &first);
             second = first * kmstomiles;
-            printf("%f Kilometer is equal to %f Miles\n", first, second);
+            printf("%f Kilometer is equal to %f Miles\n\n\n", first, second);
             break;
 
         case '3':
             printf("Enter quantity in terms of first unit\n");
             scanf("%f", &first);
             second = first * mtocm;
-            printf("%f Meter is equal to %f Centimeter\n", first, second);
+            printf("%f Meter is equal to %f Centimeter\n\n\n", first, second);
             break;
 
         case '4':
             printf("Enter quantity in terms of first unit\n");
             scanf("%f", &first);
             second = first * inchestofoot;
-            printf("%f Inches is equal to %f Foot\n", first, second);
+            printf("%f Inches is equal to %f Foot\n\n\n", first, second);
             break;
 
         case '5':
             printf("Enter quantity in terms of first unit\n");
             scanf("%f", &first);
             second = first * cmtoinches;
-            printf("%f Centimeter is equal to %f Inches\n", first, second);
+            printf("%f Centimeter is equal to %f Inches\n\n\n", first, second);
             break;
 
         case '6':
             printf("Enter quantity in terms of first unit\n");
             scanf("%f", &first);
             second = first * poundtokgs;
-            printf("%f Pound is equal to %f Kilograms\n", first, second);
+            printf("%f Pound is equal to %f Kilograms\n\n\n", first, second);
             break;
 
         case '7':
             printf("Enter quantity in terms of first unit\n");
             scanf("%f", &first);
             second = first * inchestometres;
-            printf("%f Inches is equal to %f Meters\n", first, second);
+            printf("%f Inches is equal to %f Meters\n\n\n", first, second);
             break;
 
         default:
