@@ -1,219 +1,268 @@
-@import url('https://fonts.googleapis.com/css2?family=Cookie&display=swap');
-
+/* CSS RESET */
 *{
-    margin:0px;
-    box-sizing: border-box;
-    padding: 0;
+    margin: 0px;
+    padding: 0px;
 }
 
-#logo{
-    display: flex;
-    color: white;
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    background-color: rgba(116, 106, 106, 0.281);
+}
+/* CSS Variables */
+:root{
+    --navbar-height:59px
+}
+
+/* NAVIGATION BAR */
+#navbar
+{
+    display:flex;
     align-items: center;
-    /* margin: 0 14px; */
-    font-size: 25px;
-    margin-right: 40px;
+    height: 50px;    
+    background-color: black;
+    opacity: 10;
+    position: sticky;
+    top: 0px; 
+}
+
+#navbar::before{
+    content: "";
+    background-color: black;
+    position: absolute;
+   top: 0px;
+   left: 0px;
+   height: 100;
+    width: 100%;
+    z-index: -1;
+    opacity: 10;
+} 
+
+/*NAVIGATION BAR:  logo and image */
+#logo{
+margin: 5px 5px;
 }
 
 #logo img{
-height: 48px;
-/* filter: invert(); */
+    height: 50px;
+    margin: 3px 6px;
 }
-#navbar{
-    background-color: black;
-    padding: 15px 15px;
-    font-family: 'Cookie', cursive;
-    align-items: center;
-}
+
+/*NAVIGATION BAR: list styling */
 
 #navbar ul{
-display: flex;
-flex-direction: row;
-/* justify-content: center; */
+    /* isse list sidhi ho jaegi Y Axis pe */
+    display: flex;
+    font-family: 'Anton', sans-serif;
+
 }
 
-#navbar li{
+#navbar ul li{
+    /* isse vo bullets hat jaege */
     list-style: none;
+    font-size:1.3rem;
 }
 
-#navbar li a{
-    color: rgba(233, 227, 227, 0.993);
+#navbar ul li a{
+    color: white;
+    /* padding dene k lie diplay block krte h */
+    display: block;
+    padding: 3px 22px;
+    border-radius: 20px;
     text-decoration: none;
-    padding: 13px 30px;
-    text-shadow: 5px 7px 8px teal;
-    font-size: 39px;
-    font-weight: bold;
+    cursor: pointer;
 }
 
-#navbar li a:hover{
-    color: rgb(43, 144, 226);
-    /* color: rgba(71, 167, 247, 0.836); */
-    box-shadow: 2px 6px 8px rgb(79, 154, 216), -2px -6px 8px rgb(43, 144, 226);
-    transition: .4s;
-    transition-delay: .4s;
+#navbar ul li a:hover{
+    color: black;
+    background-color: #fff;
 }
 
-#introSection{
-color: rgba(233, 227, 227, 0.993);
+/* HOME SECTION */
+#home{
+/* isse list sidhi ho jaegi Y Axis pe */
 display: flex;
 flex-direction: column;
-padding: 26px;
-justify-content: top;
+padding: 3px 200px;
+height: 745px;
+justify-content: center;
 align-items: center;
-background: center/cover no-repeat url("/static/dance.jpg");
-/* background: center/contain no-repeat url("/static/dance.jpg"); */
-height: 800px;
-background-color: black;
-font-family: 'Cookie', cursive;
-font-size: 90px;
-text-shadow: 3px 8px 8px gray;
 }
 
-#introSection div.small{
-    font-size: 52px;
-    padding: 4px;
-}
-
-#MissionSection{
-    height: 570px; 
+#home::before{
+    content: "";
+    position: absolute;
+    background: url('food2.jpg') no-repeat center center/cover;
+    height: 800px;
+    top: 0px;
+   left: 0px;
     width: 100%;
-    background-color: black;  
+    z-index: -1;
+    opacity: 0.8;
+}
+
+#home h1{
+    color: black;
+    text-align: center;
+    font-family: 'Anton', sans-serif;
+}
+
+#home p{
+    color: black;
+    text-align: center;
+    font-size: 1.5rem;
+    font-family: 'Anton', sans-serif;
+}
+ 
+/* SERVICES SECTION */
+#services{
+    margin:34px;
+    display: flex; 
+}
+
+.services-container{
+    background: url('veg.png') no-repeat center center/cover;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    opacity: 0.9;
+    
+}
+
+#services .box{
+border: 2px solid brown;
+padding: 34px;
+margin: 3px 10px;
+border-radius: 28px;
+background-color: grey;
+margin-bottom: 20px;
+
+}
+
+#services .box img{
+    height: 160px;
+    display: block;
     margin: auto;
-    /* background: center/cover no-repeat url("/static/vision.jpg"); */
+    }
+
+
+#services .box p{
+    font-family: 'Anton', sans-serif;
 }
 
-#MissionSection h2{
-    text-align: center;
-    color: rgba(233, 227, 227, 0.993);
-    text-shadow: 2px 5px 5px rgb(63, 136, 141);
-    font-family: 'Cookie', cursive;
-    font-size: 55px;
-    padding: 20px;
-    /* margin-top: 20px; */
+
+/* CLIENTS SECTIONS */
+#client-section{
+position: relative;
 }
 
-.card{
-    border: 4px solid white;
-    border-radius: 10px;
-    width: 30%;
-    margin:25px 28px;
-    height: 400px;
-    display: inline-block; 
+#client-section::before{
+    content:"";
+    position: absolute;
+    background: url('food2.jpg') no-repeat center center/cover;
+    width: 100%;
+    height:100%;
+    z-index: -1;
+    opacity: 0.9;
+    }
+
+#clients{
+    display: flex; 
+    justify-content: center;
+    align-items: center ;
+    height: 300px;
+    padding-bottom: 100px;;
 }
 
-.card h3{
-    color: white;
-    font-size: 50px;
-    font-family: 'Cookie', cursive;
-    text-align: center;
-    margin:15px 10px;
-    text-shadow: 2px 5px 5px rgb(63, 136, 141);
+.client-item{
+    padding: 10px;
 }
 
-.card-box{
+#clients img{
+    height: 170px;
+}
+
+/* CONTACT SECTION */
+#contact{
+   position: relative;
+   height: 700px;
+   margin-top: 10px;
+  
+}
+
+#contact::before{
+    content: "";
+    position: absolute; 
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    opacity: 0.8;
+    background: url('cts.png')  no-repeat center center/cover;
+}
+
+#contact-box{
     display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-.card-img{
-    /* height: 350px; */
-    height: 200px;
-    padding: 0 14px;
-    /* margin: 9px 80px; */
-    margin: 20px 05px;
-}
-
-.card-img img{
-    height: inherit;
-}
-
-.card-content{
-    padding: 0 10px;
-
-}
-
-.card-content p::before{
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-    z-index: 1;
-    background: rgb(0, 10, 10);
-    mix-blend-mode: color;
-    animation: animate 2s linear infinite;
-    }
-    @keyframes animate{
-        0%{
-            filter: hue-rotate(0deg);
-        }
-        100%{
-            filter: hue-rotate(360deg);
-        }
-    }
-
-
-.card-content p{
-    padding: 25px;
-    color: white;
-    font-size: 48px;
-    font-family: 'Cookie', cursive;
-    filter: blur(0.1px);
-    font-weight: 100;
-    text-shadow: 0 0 1px rgba(255, 255, 255, 1),
-                         0 0 2px rgba(255, 255, 255, 1),
-                         0 0 4px rgba(255, 255, 255, 1),
-                         0 0 8px rgba(255, 255, 255, 1),
-                         0 0 16px rgba(255, 255, 255, 1); 
-    font-weight: 100;
-    text-shadow: 0 0 1px rgba(255, 255, 255, 1),
-                         0 0 2px rgba(255, 255, 255, 1),
-                         0 0 4px rgba(255, 255, 255, 1),
-                         0 0 8px rgba(255, 255, 255, 1),
-                         0 0 16px rgba(255, 255, 255, 1); 
-    }
-   
-
-
-#SponsorsSection{
-    height: 370px;    
-    background-color: black;
-    margin-top: auto;
-    background: center/cover no-repeat url("/static/img/clients.jpg");
-}
-
-#SponsorsSection h2{
-    text-align: center;
-    color: rgba(233, 227, 227, 0.993);
-    text-shadow: 2px 5px 5px rgb(63, 136, 141);
-    font-family: 'Cookie', cursive;
-    font-size: 55px;
-    /* margin-top: 20px; */
-}
-
-#sponsors{
-   height: 191px;
-    max-width: 1000px;
-    margin:20px auto;
-}
-
-.spImage{
-    height: 90px;
-    margin: 20px;
-}
-
-
-
-#footer{
-    color: white;
-    height: 40px;
-    display: flex;
-    font-size: 23px;
-    font-weight: bold;
     justify-content: center;
     align-items: center;
-    background-color: black;
-    font-family: 'Times New Roman', Times, serif;
+    padding-bottom: 34px;
+}
+
+#contact-box input,
+#contact-box textarea{
+    width: 100%;
+    padding: 0.5rem;
+    border-radius: 9px;
+    font-size: 1.5rem;
+}
+
+#contact-box form{
+    width: 40%;    
+}
+
+#contact-box label{
+   font-size: 1.3rem;  
+   font-family: 'Anton', sans-serif;
+}
+
+
+footer{
+    background: black;
+    color: white;
+    padding: 9px 20px;
+    font-size: 20px;
+}
+
+
+
+
+/* UTILITY CLASSES */
+.h-primary{
+    font-size: 3.8rem;
+    padding: 12px;
+    font-family: 'Anton', sans-serif;
+   
+}
+
+.h-secondary{
+    font-size: 2.3rem;
+    padding: 12px;
+    font-family: 'Anton', sans-serif;
+  
+}
+
+.btn{
+padding: 6px 20px;
+border: 2px soild white;
+background-color: brown;
+color: white;
+margin: 17px;
+font-size: 1.5rem;
+border-radius: 10px;
+cursor: pointer;
+}
+
+.center{
+    text-align: center;
 }
