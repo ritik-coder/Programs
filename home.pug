@@ -1,0 +1,51 @@
+extends base.pug
+
+block scripts
+  script(src='/static/index.js')
+
+block style
+    style
+      include ../static/style.css
+
+block content
+    section#introSection
+        div Welcome to Anshul's Dance Academy
+        div.small Eat Sleep Dance Repeat!! 
+
+    section#MissionSection
+        h2 Our Mission
+        div.card
+            h3 Dance Perfection
+            div.card-box
+                div.card-img
+                    img(src="/static/img/pic1.png")               
+                div.card-content
+                      p This is the best dance academy of the i have ever seen so far.
+               
+
+        div.card
+            h3 Dance the way you like
+            div.card-box
+                div.card-img
+                    img(src="/static/img/pic2.png")               
+                div.card-content
+                      p This is the best dance academy of the universe
+               
+
+        div.card
+            h3 Anybody Can Dance
+            div.card-box
+                div.card-img
+                    img(src="/static/img/pic3.png")               
+                div.card-content
+                      p This is the best dance academy of the universe
+              
+
+    section#SponsorsSection
+        h2 Our Sponsors
+        div#sponsors
+            img(src="/static/img/mc.png", alt="sponsor Image", class="spImage")
+            img(src="/static/img/compunnel.jpg", alt="sponsor Image" class="spImage")
+            img(src="/static/img/agt.jpg", alt="sponsor Image", class="spImage")
+            img(src="/static/img/ai.jpg", alt="sponsor Image", class="spImage")
+            img(src="/static/img/ms.png", alt="sponsor Image", class="spImage") 
